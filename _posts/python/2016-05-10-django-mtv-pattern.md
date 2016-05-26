@@ -20,6 +20,6 @@ Django에서는 MTV(Model-Template-View)패턴을 사용하는데 사실 그 안
 
 이렇게 정리할 수 있는데 이해하기 쉽게 그림으로 보면 아래와 같다.
 
-![Django MVT](/assets/post_image/django_mvt.png)
+![Django MVT](/static/post_image/django_mvt.png)
 
 *출처: 본 내용은 `Django로 배우는 쉽고 빠른 웹 개발 - 파이썬 웹프로그래밍`을 정리한 내용입니다*

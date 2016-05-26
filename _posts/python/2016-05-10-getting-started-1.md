@@ -72,7 +72,7 @@ Django는 기본적으로 모든 웹 프로젝트 개발 시 반드시 `사용�
 
 `settings.py`내에 따로 데이터베이스 연동 설정을 건드리지 않았기 때문에 기본 설정인 `Sqlite` 데이터가 생성된다.
 
-![Django Sqlite](/assets/post_image/django_sqlite.png)
+![Django Sqlite](/static/post_image/django_sqlite.png)
 
 Sqlite 툴을 이용해 생성된 데이터 파일을 로드한 그림이다.<br/>
 좌측에 사용자 및 사용자 그룹 관련 여러 테이블이 생성된 것을 볼 수 있다.
@@ -96,7 +96,7 @@ Quit the server with CONTROL-C.
 
 ## 웹 브라우저 실행
 
-![Django Web Server](/assets/post_image/django_runserver.png)
+![Django Web Server](/static/post_image/django_runserver.png)
 
 웹 브라우저를 통해 접속한 모습이다.
 

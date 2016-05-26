@@ -18,7 +18,7 @@ tags:
 `Hotspot JVM`은 `Generational Collection`을 사용하는데 `Heap`영역을 `Young Generation`과 `Old Generation`으로 나눈다.
 이름에서 이미 눈치챘겠지만 `Young Generation`에는 어린 객체들이 `Old Generation`에는 오래된 객체들이 할당되는 공간이다.
 
-![Java Heap](/assets/post_image/java_heap.png)
+![Java Heap](/static/post_image/java_heap.png)
 
 ## 1. Young Generation
 앞서 설명했지만 `Young Generation`영역에는 새로운 객체가 할당되거나 어린 객체들이 모여있는 공간이다. 이 `Young Generation`영역은 다시 `Eden`영역과 `Survivor`영역으로 나뉜다.
