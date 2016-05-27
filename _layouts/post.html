@@ -114,7 +114,7 @@ layout: default
                     {% if postsAfterFilter.size > 0 %}
                         {% for p in postsAfterFilter limit: 15 %}
                             <li>
-                                <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}">{{ p.title }}</a>
+                                <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}" style="font-size: calc(100% - 0.3em);">{{ p.title }}</a>
                             </li>
                         {% endfor %}
                     {% endif %}
