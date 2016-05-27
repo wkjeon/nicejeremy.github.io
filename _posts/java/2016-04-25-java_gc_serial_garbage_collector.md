@@ -7,6 +7,10 @@ tags:
 - java
 - gc
 ---
+
+* content
+{:toc}
+
 # Java의 Garbage Collection - Serial Garbage Collector
 
 ## 개요
