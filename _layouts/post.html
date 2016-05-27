@@ -33,22 +33,22 @@ layout: default
             <div id="share-buttons">
 
                 <!-- Facebook -->
-                <a href="http://www.facebook.com/sharer.php?u={{ post.url | prepend: site.baseurl | prepend: site.url }}" target="_blank">
+                <a href="http://www.facebook.com/sharer.php?u={{ page.url | prepend: site.baseurl | prepend: site.url }}" target="_blank">
                     <img src="{{ site.baseurl | prepend: site.url }}/static/img/social/facebook.png" alt="Facebook" />
                 </a>
 
                 <!-- Google+ -->
-                <a href="https://plus.google.com/share?url={{ post.url | prepend: site.baseurl | prepend: site.url }}" target="_blank">
+                <a href="https://plus.google.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}" target="_blank">
                     <img src="{{ site.baseurl | prepend: site.url }}/static/img/social/google.png" alt="Google" />
                 </a>
 
                 <!-- LinkedIn -->
-                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ post.url | prepend: site.baseurl | prepend: site.url }}" target="_blank">
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.url | prepend: site.baseurl | prepend: site.url }}" target="_blank">
                     <img src="{{ site.baseurl | prepend: site.url }}/static/img/social/linkedin.png" alt="LinkedIn" />
                 </a>
 
                 <!-- Twitter -->
-                <a href="https://twitter.com/share?url={{ post.url | prepend: site.baseurl | prepend: site.url }}&amp;text={{ page.title }}&amp;hashtags={{ page.tag }}" target="_blank">
+                <a href="https://twitter.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&amp;text={{ page.title }}&amp;hashtags={{ page.tag }}" target="_blank">
                     <img src="{{ site.baseurl | prepend: site.url }}/static/img/social/twitter.png" alt="Twitter" />
                 </a>
 
