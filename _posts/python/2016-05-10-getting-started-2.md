@@ -7,7 +7,9 @@ tags:
 - python
 - django
 ---
-# Django 시작하기 - 2
+
+* content
+{:toc}
 
 ## 관리자 사이트
 

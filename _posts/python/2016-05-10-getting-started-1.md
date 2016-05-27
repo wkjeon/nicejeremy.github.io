@@ -7,7 +7,9 @@ tags:
 - python
 - django
 ---
-# Django 시작하기 - 1
+
+* content
+{:toc}
 
 Django를 깊이 파보기에 앞서 일단 무작정 `HelloWorld`라는 Django 프로젝트를 하나 생성하고 이를 웹 서버를 이용해 실행해보도록 하겠다
 

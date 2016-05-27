@@ -11,8 +11,6 @@ tags:
 * content
 {:toc}
 
-# Java의 Garbage Collection - Serial Garbage Collector
-
 ## 개요
 자바 개발자라면 누구나 알고 있는 `GC (Garbage Collection)`에 대해 다루고자 한다<br/>
 인간의 망각에 대비해 여러 `Garbage Collector` 중 이번 포스팅에서는 가장 기본이 되는 `Serial Garbage Collector`에 대해 기록한다.

@@ -7,7 +7,11 @@ tags:
 - python
 - django
 ---
-# Django의 MTV 모델
+
+* content
+{:toc}
+
+## 개요
 
 Django에서는 MTV(Model-Template-View)패턴을 사용하는데 사실 그 안을 들여다보면 기존 MVC 모델과 동일하다.
 다만 Django에서는 **MVC 모델에서의 View를 Template, Controller를 View**라고 명명한다

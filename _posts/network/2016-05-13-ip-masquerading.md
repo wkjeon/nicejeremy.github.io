@@ -6,7 +6,11 @@ categories: network
 tags:
 - network
 ---
-# IP Masquerade (IP 메스쿼레이딩)
+
+* content
+{:toc}
+
+## 개요
 
 네트워크 용어 중에 `Masquerade`이라는 용어가 있다.<br/>
 어제 포스팅한 `dnsmasq`의 masq도 이 `Masquerade`의 약어인데 그냥 그런가보다하고 넘어가면 나중에 까먹어비릴거 같아 간단히 정리한다.
