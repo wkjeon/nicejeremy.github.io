@@ -34,8 +34,8 @@ cinder-backup start/running, process 19473
 ## 볼륨 백업 (Volume Backup)
 `Cinder`에서는 다음의 3가지의 백업 방식을 지원한다.
 
-> snapshot: 볼륨에 대한 스냅샷 이미지
-> cgsnapshot: Consistency Group에 대한 스냅샷 이미지
+> snapshot: 볼륨에 대한 스냅샷 이미지<br/>
+> cgsnapshot: Consistency Group에 대한 스냅샷 이미지<br/>
 > backup: 볼륨에 대한 백업
 
 `스냅샷(snapshot)`은 볼륨의 현재 상태에 대해 사진을 찍는다고 생각하면된다. `Cinder`에서는 이 스냅샷 기능을 이용해 특정 시점에 특정 볼륨을 이미지화 시키는 기능을 제공해주는데 사실 백업이라기 보다는 일종의 볼륨 템플릿을 뜬다는 개념이 강하다. 실제로 `Cinder` 스냅샷을 이용해 할 수 있는 기능에는 복원 같은 기능이 포함되어 있지 않고 스냅샷을 이용한 인스턴스 생성과 같은 기능을 사용할 수 있다.
@@ -85,7 +85,7 @@ $ cinder backup-create 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e --container 'Cinder-
 | volume_id | 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e |
 +-----------+--------------------------------------+
 
-$ cinder backup-show 23c651a3-7958-4cf9-8587-c21feebcbdb6                                                                                                                                                                                   Mon Jun 13 04:01:30 2016
+$ cinder backup-show 23c651a3-7958-4cf9-8587-c21feebcbdb6
   
 +-----------------------+--------------------------------------+
 |        Property       |                Value                 |
@@ -126,7 +126,7 @@ $ cinder backup-create 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e --container 'Cinder-
 | volume_id | 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e |
 +-----------+--------------------------------------+
 
-$ cinder backup-show 98c50a79-4e04-40c8-8168-9ff6695c4b39                                                                                                                                                                                   Mon Jun 13 06:11:01 2016
+$ cinder backup-show 98c50a79-4e04-40c8-8168-9ff6695c4b39
 
 +-----------------------+--------------------------------------+
 |        Property       |                Value                 |
