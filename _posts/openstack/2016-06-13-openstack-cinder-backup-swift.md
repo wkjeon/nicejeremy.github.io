@@ -11,7 +11,7 @@ tags:
 ---
 
 ## Overview
-`OpenStack` 프로젝트 중 `Cinder`는 `볼륨(Volume)`에 대한 관리를 담당하는 프로젝트이다. 이번 포스팅에서는 **성된 Cinder 볼륨을 Swift에 백업(Backup)하는 방법** 설명한다. 참고로 `Swift`는 OpenStack의 Object Storage에 대한 프로젝트이다. AWS의 S3 서비스와 같다고 생각하면 된다.
+`OpenStack` 프로젝트 중 `Cinder`는 `볼륨(Volume)`에 대한 관리를 담당하는 프로젝트이다. 이번 포스팅에서는 **생성된 Cinder 볼륨을 Swift에 백업(Backup)하는 방법** 설명한다. 참고로 `Swift`는 OpenStack의 Object Storage에 대한 프로젝트이다. AWS의 S3 서비스와 같다고 생각하면 된다.
 
 ## Cinder내의 백업 드라이버 변경
 우선 Cinder 설정 파일 내의 `백업 드라이버(backup_deriver` 설정을 아래와 같이 `Swift`를 바라보도록 설정해야 한다.
