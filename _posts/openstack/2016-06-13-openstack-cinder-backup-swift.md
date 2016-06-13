@@ -33,6 +33,7 @@ cinder-backup start/running, process 19473
 
 ## 볼륨 백업 (Volume Backup)
 `Cinder`에서는 다음의 3가지의 백업 방식을 지원한다.
+
 > snapshot: 볼륨에 대한 스냅샷 이미지
 > cgsnapshot: Consistency Group에 대한 스냅샷 이미지
 > backup: 볼륨에 대한 백업
