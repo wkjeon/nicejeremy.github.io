@@ -10,6 +10,9 @@ tags:
 - swift
 ---
 
+* content
+{:toc}
+
 ## Overview
 `OpenStack` 프로젝트 중 `Cinder`는 `볼륨(Volume)`에 대한 관리를 담당하는 프로젝트이다. 이번 포스팅에서는 **생성된 Cinder 볼륨을 Swift에 백업(Backup)하는 방법** 설명한다. 참고로 `Swift`는 OpenStack의 Object Storage에 대한 프로젝트이다. AWS의 S3 서비스와 같다고 생각하면 된다.
 
