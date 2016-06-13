@@ -18,16 +18,16 @@ tags:
 
 ## Cinder내의 백업 드라이버 변경
 우선 Cinder 설정 파일 내의 `백업 드라이버(backup_deriver` 설정을 아래와 같이 `Swift`를 바라보도록 설정해야 한다.
-```vim
+{% highlight bash %}
 backup_driver=cinder.backup.drivers.swift
-```
+{% endhighlight %}
 
 백업 드라이버 변경 후 `cinder-backup`서비스를 재시작해준다
-```bash
+{% highlight bash %}
 $ service cinder-backup restart
 cinder-backup stop/waiting
 cinder-backup start/running, process 19473
-```
+{% endhighlight %}
 
 이제 `Swift`로의 백업을 위한 기본적인 설정은 모두 끝났다.
 
@@ -47,7 +47,7 @@ cinder-backup start/running, process 19473
 말 그대로 `전체 백업`을 의미한다. 특정 볼륨의 전체를 백업을 시켜버린다.
 
 아래는 `Cinder`를 이용한 백업 커맨드의 사용법이다.
-```bash
+{% highlight bash %}
 $ cinder help backup-create
 usage: cinder backup-create [--container <container>] [--name <name>]
                             [--description <description>] [--incremental]
@@ -71,10 +71,10 @@ Optional arguments:
                         the volume whether its status is "available" or "in-
                         use". The backup of an "in-use" volume means your data
                         is crash consistent. Default=False.
-```
+{% endhighlight %}
 
 아래는 실제로 특정 볼륨의 백업을 생성하는 예제이다. 
-```bash
+{% highlight bash %}
 $ cinder backup-create 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e --container 'Cinder-Backup' --name 'Initial Backup for CentOS 7' --force
 +-----------+--------------------------------------+
 |  Property |                Value                 |
@@ -103,7 +103,8 @@ $ cinder backup-show 23c651a3-7958-4cf9-8587-c21feebcbdb6                       
 |         status        |               creating               |
 |       volume_id       | 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e |
 +-----------------------+--------------------------------------+
-```
+{% endhighlight %}
+
 `in-use` 상태의 볼륨에 대해 백업을 수행할 때는 `--force` 옵션이 추가되어야 한다.
 백업이 완료되면 `status` 속성이 `available`로 바뀐다.
 
@@ -114,7 +115,7 @@ $ cinder backup-show 23c651a3-7958-4cf9-8587-c21feebcbdb6                       
 
 아래는 `증분 백업`을 생성하는 예제이다.
 해당 볼륨에서 `apt-get`을 이용해 `git`을 설치한 후 `증분 백업`을 수행했다.
-```bash
+{% highlight bash %}
 $ cinder backup-create 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e --container 'Cinder-Backup' --name 'Backup with git' --force --incremental
 +-----------+--------------------------------------+
 |  Property |                Value                 |
@@ -143,7 +144,7 @@ $ cinder backup-show 98c50a79-4e04-40c8-8168-9ff6695c4b39                       
 |         status        |               creating               |
 |       volume_id       | 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e |
 +-----------------------+--------------------------------------+
-```
+{% endhighlight %}
 
 위와 같이 `--incremental` 옵션을 이용해 백업을 하면 이전 백업분과 비교해 변경된 데이터들만 백업을 수행하게 된다.
 `backup-show` 커맨드를 통해 `is_incremental` 속성 값이 `True`인 것을 확인할 수 있다. 
@@ -159,7 +160,7 @@ $ cinder backup-show 98c50a79-4e04-40c8-8168-9ff6695c4b39                       
 
 백업이 되었다면 당연히 특정 백업 시점으로 `복원`이 되어야한다. 백업본을 이용한 볼륨을 `복원`하는 방법은 아래와 같다.
 
-```bash
+{% highlight bash %}
 $ cinder help backup-restore
 usage: cinder backup-restore [--volume <volume>] <backup>
 
@@ -170,13 +171,13 @@ Positional arguments:
 
 Optional arguments:
   --volume <volume>  Name or ID of volume to which to restore. Default=None.
-```
+{% endhighlight %}
 
 파라미터로 `복구할 백업본 ID`와 `볼륨명 또는 볼륨 ID`가 들어간다.
 먼저 복원을 수행하려면 해당 볼륨의 상태가 `available` 상태이어야한다. 이를 위해 인스턴스와 볼륨을 잠깐 분리하였다. 
 이제 이 명령어를 이용해 아래와 같이 `git` 설치 이전으로 `복원`을 해보도록 하겠다. 
 
-```bash
+{% highlight bash %}
 $ cinder backup-restore --volume 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e 23c651a3-7958-4cf9-8587-c21feebcbdb6
 +-------------+--------------------------------------+
 |   Property  |                Value                 |
@@ -185,7 +186,8 @@ $ cinder backup-restore --volume 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e 23c651a3-7
 |  volume_id  | 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e |
 | volume_name |                                      |
 +-------------+--------------------------------------+
-```
+{% endhighlight %}
+
 위의 명령어를 통해 `복원`을 수행한 후 `show` 커맨드를 이용해 볼륨의 상태를 체크해보면 `status`값이 `restoring-backup`로 변경된 것을 확인할 수 있다.
 
 `Horizon`의 볼륨메뉴를 통해서 확인하면 아래와 같이 백업 복구 상태로 변경되었음을 확인할 수 있다 
