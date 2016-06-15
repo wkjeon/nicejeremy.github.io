@@ -18,11 +18,13 @@ tags:
 
 ## Cinder내의 백업 드라이버 변경
 우선 Cinder 설정 파일 내의 `백업 드라이버(backup_deriver` 설정을 아래와 같이 `Swift`를 바라보도록 설정해야 한다.
+
 {% highlight bash %}
 backup_driver=cinder.backup.drivers.swift
 {% endhighlight %}
 
 백업 드라이버 변경 후 `cinder-backup`서비스를 재시작해준다
+
 {% highlight bash %}
 $ service cinder-backup restart
 cinder-backup stop/waiting
@@ -48,6 +50,7 @@ cinder-backup start/running, process 19473
 말 그대로 `전체 백업`을 의미한다. 특정 볼륨의 전체를 백업을 시켜버린다.
 
 아래는 `Cinder`를 이용한 백업 커맨드의 사용법이다.
+
 {% highlight bash %}
 $ cinder help backup-create
 usage: cinder backup-create [--container <container>] [--name <name>]
@@ -75,6 +78,7 @@ Optional arguments:
 {% endhighlight %}
 
 아래는 실제로 특정 볼륨의 백업을 생성하는 예제이다. 
+
 {% highlight bash %}
 $ cinder backup-create 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e --container 'Cinder-Backup' --name 'Initial Backup for CentOS 7' --force
 +-----------+--------------------------------------+
@@ -116,6 +120,7 @@ $ cinder backup-show 23c651a3-7958-4cf9-8587-c21feebcbdb6
 
 아래는 `증분 백업`을 생성하는 예제이다.
 해당 볼륨에서 `apt-get`을 이용해 `git`을 설치한 후 `증분 백업`을 수행했다.
+
 {% highlight bash %}
 $ cinder backup-create 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e --container 'Cinder-Backup' --name 'Backup with git' --force --incremental
 +-----------+--------------------------------------+
@@ -192,6 +197,7 @@ $ cinder backup-restore --volume 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e 23c651a3-7
 위의 명령어를 통해 `복원`을 수행한 후 `show` 커맨드를 이용해 볼륨의 상태를 체크해보면 `status`값이 `restoring-backup`로 변경된 것을 확인할 수 있다.
 
 `Horizon`의 볼륨메뉴를 통해서 확인하면 아래와 같이 백업 복구 상태로 변경되었음을 확인할 수 있다 
+
 ![Volume Restoring](/static/post_image/openstack_cinder_volume_restore.png)
 
 `복원`이 성공적으로 수행되면 `status`값이 `Available`로 변경된다.
