@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Keystone's Identity Flow"
+title:  "[OpenStack] Keystone's Identity Flow"
 date:   2016-06-13
 categories: openstack
 tags:

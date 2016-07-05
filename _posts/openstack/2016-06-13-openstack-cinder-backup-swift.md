@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Cinder Backup to Swift in OpenStack"
+title:  "[OpenStack] Cinder Backup to Swift in OpenStack"
 date:   2016-06-13
 categories: openstack
 tags:
