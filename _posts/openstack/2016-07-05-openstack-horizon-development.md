@@ -59,3 +59,30 @@ OPENSTACK_HOST = "<YOUR_OWN_OPENSTACK_ENDPOINT_HOST>"
 {% highlight bash %}
 $ ./run_tests.sh --runserver localhost:9000
 {% endhighlight %}
+
+## Integeration with PyCharm
+
+지금까지 터미널을 통해서 Horizon 프로젝트를 동작시키는 방법을 알아보았다. IntelliJ 개발환경이 익숙한 나에게는 터미널 환경 보다는 PyCharm을 통한 개발이 더 편하다.<br/>
+해서 PyCharm에서 개발을 진행하는 방법을 찾던 중 관련 내용이 있어 기록하고자 한다.
+
+*출처: http://docs.openstack.org/developer/mistral/developer/troubleshooting.html*
+
+### Django Setting
+
+PyCharm > Preferences > Languages & Frameworks > Django에 들어가서 [Enable Django Support] 항목을 체크한다.
+
+![Pycharm Django Setting](/static/post_image/openstack_pycharm_django_setting.png)
+
+### Project Configuration
+
+PyCharm > Run > Edit Configurations... > Environment variables 설정을 아래와 같이 한다.
+
+![Pycharm Django Setting](/static/post_image/openstack_pycharm_project_configuration.png)
+
+### Debugger Speedup
+
+아래와 같은 커맨드를 입력하면 Cython을 이용해 Debugger 속도를 개선을 할 수 있다.
+
+{% highlight bash %}
+$ /usr/bin/python /Applications/PyCharm.app/Contents/helpers/pydev/setup_cython.py build_ext --inplace
+{% endhighlight %}
