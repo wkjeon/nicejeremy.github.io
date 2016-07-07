@@ -65,7 +65,7 @@ $ ./run_tests.sh --runserver localhost:9000
 지금까지 터미널을 통해서 Horizon 프로젝트를 동작시키는 방법을 알아보았다. IntelliJ 개발환경이 익숙한 나에게는 터미널 환경 보다는 PyCharm을 통한 개발이 더 편하다.<br/>
 해서 PyCharm에서 개발을 진행하는 방법을 찾던 중 관련 내용이 있어 기록하고자 한다.
 
-*출처: http://docs.openstack.org/developer/mistral/developer/troubleshooting.html*
+출처: [OpenStack Troubleshooting And Debugging](http://docs.openstack.org/developer/mistral/developer/troubleshooting.html)
 
 ### Django Setting
 
