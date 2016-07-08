@@ -19,12 +19,14 @@ Python에서의 프로젝트와 어플리케이션의 개념은 다음의 [링�
 * `openstack_dashboard` 어플리케이션에서는 horizon 어플리케이션 내의 컴포넌트를 이용해 OpenStack 대시보드를 구현하고 있다.
 
 ![OpenStack Horizon Project Diagram](/static/post_image/openstack_horizon_project_diagram.png)
-<br/><br/>
+
+
 ## openstack_dashboard application
 
 `openstack_dashboard` 어플리케이션은 아래와 같은 구조로 이루어져 있다.
 
 ![openstack_dashboard Application Structure](/static/post_image/openstack_dashboard_structure.png)
+
 
 ### 1. dashboards package
 
@@ -41,7 +43,7 @@ Horizon의 메뉴구성은 다음과 같은 컴포넌트로 이루어져 있다.
 ![Horizon Menu Structure](/static/post_image/openstack_horizon_menu_structure.png)
 
 ![Horizon Menu Structure](/static/post_image/openstack_dashboard_dashboards_package_structure.png)
-<br/><br/>
+
 #### 1-2. Dashboard
 
 Horizon에서 대분류를 나타낼 때 사용한다.<br>
@@ -67,7 +69,7 @@ horizon.register(Identity)
 
 * name: 화면에 노출되는 대시보드 명
 * slug: 유니크한 ID 값, 이 값을 이용해 URL을 노출함
-<br/><br/>
+
 #### 1-3. Panel
 
 Horizon에서 실질적인 소분류 메뉴를 나타낼 때 사용한다.<br/>
@@ -112,13 +114,14 @@ class Aggregates(horizon.Panel):
 * permission: 접근 권한 설정
 * allowed (Overriden Method): 접근 권한을 확장할 때 사용 (위의 예제에서는 접근 권한 외에 Nova 서비스에서 Aggregates 확장 기능을 지원하는지 여부도 판단)
 * can_register (Static Method): 패널이 등록되기 위한 조건을 걸 때 사용, 'permission'이나 'allowed' 처럼 접근 권한 및 정책 기반이 아닌 설정 기반의 조건에 따라 판단
-<br/><br/>
+
 #### 1-4. View의 기본 흐름
 
 ![Horizon Single Table Menu Flow](/static/post_image/openstack_dashboard_datatableview_flow.png)
 
 ![Horizon Tab Menu Flow](/static/post_image/openstack_dashboard_tabbedtableview_flow.png)
-<br/><br/>
+
+
 #### 1-5. views (views.py)
 
 해당 패널에서 사용할 뷰를 정의하고 데이터를 로드하는 로직을 구현하는 클래스<br>
@@ -127,7 +130,7 @@ class Aggregates(horizon.Panel):
 * 뷰 템플릿 로드
 * 페이지 타이틀 정의
 * 뷰에 바인딩할 데이터 로딩
-<br/><br/>
+
 #### 1-6. view components
 
 `views.py`에서 사용할 뷰를 정의하는 클래스, `DataTable`나 `TabTable`를 상속받아 구현한다.<br>
@@ -136,19 +139,20 @@ class Aggregates(horizon.Panel):
 * 일반 메뉴의 구조: DataTableView(views.py) → DataTable(tables.py)
 * TabTable의 경우 일부 'views.py' 역할과 겹침 (뷰 컴포넌트 로드, 뷰 템플릿 로드, 탭 타이틀 및 URL 정의, 뷰에 바인딩할 데이터 로딩)
 * 탭 메뉴의 구조: TabbedTableView(views.py) → TabGroup(tabs.py) → TableTab(tabs.py) → DataTable(tabs.py)
-<br/><br/>
+
 #### 1-7. urls (urls.py)
 
 Request URL과 View 클래스를 매핑한다.
-<br/><br/>
+
 #### 1-8. templates (folder)
 
 뷰 컴포넌트에서 사용하는 html 템플릿들을 관리한다.
-<br/><br/>
+
 #### 1-9. tests (package)
 
 해당 패널의 테스트 코드를 관리한다.
-<br/><br/>
+
+
 ### 2. enabled package
 
 위의 `dashboards 패키지` 내에서 정의한 `Dashboard`, `Panel` 들에 대한 관계, 순서 및 해당 대시보드에서 추가로 정의할 Angular 모듈, Java Script 모듈, 스타일 시트 등을 정의할 수 있다.
