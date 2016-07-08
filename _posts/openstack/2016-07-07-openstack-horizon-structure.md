@@ -65,7 +65,7 @@ class Identity(horizon.Dashboard):
 horizon.register(Identity) 
 {% endhighlight %}
 
-**horizon.Dashboard 의 주요 속성**
+**horizon.Dashboard 의 주요 속성**<br>
 * name: 화면에 노출되는 대시보드 명
 * slug: 유니크한 ID 값, 이 값을 이용해 URL을 노출함
 
@@ -106,7 +106,7 @@ class Aggregates(horizon.Panel):
         return super(Aggregates, self).allowed(context) 
 {% endhighlight %}
 
-**horizon.Panel 의 주요 속성**
+**horizon.Panel 의 주요 속성**<br>
 * name: 화면에 노출되는 패널 명
 * slug: 유니크한 ID 값, 이 값을 이용해 URL을 노출함
 * permission: 접근 권한 설정
@@ -122,7 +122,7 @@ class Aggregates(horizon.Panel):
 
 #### 1-5. views (views.py)
 
-해당 패널에서 사용할 뷰를 정의하고 데이터를 로드하는 로직을 구현하는 클래스
+해당 패널에서 사용할 뷰를 정의하고 데이터를 로드하는 로직을 구현하는 클래스<br>
 * 뷰 컴포넌트 로드
 * 뷰 템플릿 로드
 * 페이지 타이틀 정의
@@ -130,7 +130,7 @@ class Aggregates(horizon.Panel):
 
 #### 1-6. view components
 
-`views.py`에서 사용할 뷰를 정의하는 클래스, `DataTable`나 `TabTable`를 상속받아 구현한다.
+`views.py`에서 사용할 뷰를 정의하는 클래스, `DataTable`나 `TabTable`를 상속받아 구현한다.<br>
 * DataTable의 경우 테이블 뷰 컴포넌트 정의 (컬럼, 테이블 명, 테이블 출력 및 컨트롤 설정, 테이블 액션 등)
 * 일반 메뉴의 구조: DataTableView(views.py) → DataTable(tables.py)
 * TabTable의 경우 일부 'views.py' 역할과 겹침 (뷰 컴포넌트 로드, 뷰 템플릿 로드, 탭 타이틀 및 URL 정의, 뷰에 바인딩할 데이터 로딩)
