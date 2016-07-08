@@ -34,7 +34,8 @@ Python에서의 프로젝트와 어플리케이션의 개념은 다음의 [링�
 
 #### 1-1. 메뉴 구성
 
-Horizon의 메뉴구성은 다음과 같은 컴포넌트로 이루어져 있다.
+Horizon의 메뉴구성은 다음과 같은 컴포넌트로 이루어져 있다.<br/>
+
 > Dashboard: 대 분류
 > PanelGroup: 중 분류 (PanelGroup은 dashboard 패키지 내에서 클래스를 정의하지 않고 `enabled 패키지`에서 사이드 메뉴 설정을 할 때 관계를 위한 클래스만 생성한다.)
 > Panel: 소 분류
