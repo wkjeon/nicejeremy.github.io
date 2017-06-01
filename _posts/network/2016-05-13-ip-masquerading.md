@@ -22,4 +22,4 @@ tags:
 
 여기까지만 보면 `SNAT`와 동일한 기능으로 보이지만 둘 사이에 어떤 차이점을 보이는지는 아직 잘 모르겠다.
 
-![IP Masquerade](/static/post_image/ip_masquerade.png)
+![IP Masquerade](../../static/post_image/ip_masquerade.png)

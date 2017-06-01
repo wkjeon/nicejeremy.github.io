@@ -1,44 +1,86 @@
-permalink: /:year-:month-:day/:title/
+# permalink: /:year-:month-:day/:title/
 
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input:  GFM
-  syntax_highlighter: rouge
-
-
-paginate: 10
-paginate_path: ":num"
-baseurl: ""
+# highlighter: rouge
+# markdown: kramdown
+# kramdown:
+#   input:  GFM
+#   syntax_highlighter: rouge
 
 
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-      styles : [highlight.css,post.css]
-      scripts : [post.js]
+# paginate: 10
+# paginate_path: ":num"
+# baseurl: ""
 
 
 
-title: "Nice Jeremy"
-email: "woogri83@gmail.com"
-description: "Be nice :-)"
-github_username:  "nicejeremy"
-#swiftype_searchId: "ncwR9a8S9CTx2q9SgsJm"
-disqus_shortname: "nicejeremy"
+# defaults:
+#   -
+#     scope:
+#       path: ""
+#       type: "posts"
+#     values:
+#       layout: post
+#       styles : [highlight.css,post.css]
+#       scripts : [post.js]
+
+
+
+# title: "Nice Jeremy"
+# email: "woogri83@gmail.com"
+# description: "Be nice :-)"
+# github_username:  "nicejeremy"
+# #swiftype_searchId: "ncwR9a8S9CTx2q9SgsJm"
+# disqus_shortname: "nicejeremy"
 
 
 
 
-url: "http://nicejeremy.github.io"
-imgrepo: "http://nicejeremy.github.io/static/img"
+# url: "http://nicejeremy.github.io"
+# imgrepo: "http://nicejeremy.github.io/static/img"
 
 
 #url: "http://127.0.0.1:4000"
 #imgrepo: "http://127.0.0.1:4000/static/img"
 
+
+
+
+# Site settings
+name: Nice Jeremy
+email: woogri83@gmail.com
+author: Jeremy Jeon
+url: http://www.jeremy.kr
+# resume_site: http://www.hifreud.com/Resume.io/
+github: https://github.com/nicejeremy/
+baseurl: "/home"
+description: Be Nice!
+meta_description: 
+motto: Be Nice!
+banner: 
+
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+paginate: 10
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: nicejeremy
+highlighter: Pygments
+
+# Build settings
+markdown: kramdown
+
+# baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
+
+# FB:
+#   comments :
+#     provider : duoshuo
+#     duoshuo:
+#         short_name : luoyan35714
+#     disqus :
+#         short_name : freudkang
+    # facebook :
+    #   appid : 123
+    #   num_posts: 5
+    #   width: 580
+    #   colorscheme: light
