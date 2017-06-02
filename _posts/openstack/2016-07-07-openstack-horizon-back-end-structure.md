@@ -20,14 +20,14 @@ Python에서의 프로젝트와 어플리케이션의 개념은 다음의 [링�
 * `horizon` 어플리케이션에는 Horizon 대시보드에서 사용하는 각종 UI 컴포넌트들이 정의되어 있다.
 * `openstack_dashboard` 어플리케이션에서는 horizon 어플리케이션 내의 컴포넌트를 이용해 OpenStack 대시보드를 구현하고 있다.
 
-![OpenStack Horizon Project Diagram](/static/post_image/openstack_horizon_project_diagram.png)
+![OpenStack Horizon Project Diagram](/post_images/openstack_horizon_project_diagram.png)
 
 
 ## openstack_dashboard application
 
 `openstack_dashboard` 어플리케이션은 아래와 같은 구조로 이루어져 있다.
 
-![openstack_dashboard Application Structure](/static/post_image/openstack_dashboard_structure.png)
+![openstack_dashboard Application Structure](/post_images/openstack_dashboard_structure.png)
 
 
 ### 1. dashboards package
@@ -42,9 +42,9 @@ Horizon의 메뉴구성은 다음과 같은 컴포넌트로 이루어져 있다.
 > PanelGroup: 중 분류 (PanelGroup은 dashboard 패키지 내에서 클래스를 정의하지 않고 `enabled 패키지`에서 사이드 메뉴 설정을 할 때 관계를 위한 클래스만 생성한다.)<br>
 > Panel: 소 분류<br>
 
-![Horizon Menu Structure](/static/post_image/openstack_horizon_menu_structure.png)
+![Horizon Menu Structure](/post_images/openstack_horizon_menu_structure.png)
 
-![Horizon Menu Structure](/static/post_image/openstack_dashboard_dashboards_package_structure.png)
+![Horizon Menu Structure](/post_images/openstack_dashboard_dashboards_package_structure.png)
 
 #### 1-2. Dashboard
 
@@ -119,9 +119,9 @@ class Aggregates(horizon.Panel):
 
 #### 1-4. View의 기본 흐름
 
-![Horizon Single Table Menu Flow](/static/post_image/openstack_dashboard_datatableview_flow.png)
+![Horizon Single Table Menu Flow](/post_images/openstack_dashboard_datatableview_flow.png)
 
-![Horizon Tab Menu Flow](/static/post_image/openstack_dashboard_tabbedtableview_flow.png)
+![Horizon Tab Menu Flow](/post_images/openstack_dashboard_tabbedtableview_flow.png)
 
 
 #### 1-5. views (views.py)
@@ -159,7 +159,7 @@ Request URL과 View 클래스를 매핑한다.
 
 위의 `dashboards 패키지` 내에서 정의한 `Dashboard`, `Panel` 들에 대한 관계, 순서 및 해당 대시보드에서 추가로 정의할 Angular 모듈, Java Script 모듈, 스타일 시트 등을 정의할 수 있다.
 
-![openstack_dashboard enabled package flow](/static/post_image/openstack_dashboard_enabled_package_flow.png)
+![openstack_dashboard enabled package flow](/post_images/openstack_dashboard_enabled_package_flow.png)
 
 ex) Project 대시보드 예
 {% highlight python %}

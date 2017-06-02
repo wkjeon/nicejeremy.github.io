@@ -160,7 +160,7 @@ $ cinder backup-show 98c50a79-4e04-40c8-8168-9ff6695c4b39
 
 백업이 완료가 되면 아래와 같이 Swift 컨테이너에 볼륨 백업본이 저장되어 있는 것을 볼 수 있다.
 
-![Volume Backup to Swift](/static/post_image/openstack_cinder_backup_to_swift.png)
+![Volume Backup to Swift](/post_images/openstack_cinder_backup_to_swift.png)
 
 ## 복원 (Restore)
 
@@ -198,6 +198,6 @@ $ cinder backup-restore --volume 3731b3c2-0b5f-4a54-beb9-82a7d7b74e8e 23c651a3-7
 
 `Horizon`의 볼륨메뉴를 통해서 확인하면 아래와 같이 백업 복구 상태로 변경되었음을 확인할 수 있다 
 
-![Volume Restoring](/static/post_image/openstack_cinder_volume_restore.png)
+![Volume Restoring](/post_images/openstack_cinder_volume_restore.png)
 
 `복원`이 성공적으로 수행되면 `status`값이 `Available`로 변경된다.

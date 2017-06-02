@@ -65,7 +65,7 @@ OpenStack 클라우드 서비스를 사용하는 사용자, 시스템 혹은 서
 
 아래의 그림은 `Keystone`을 이용해 클라이언트가 인증과정을 거처 `OpenStack Service API`를 사용하기 까지의 간략한 흐름이다.
 
-![OpenStack Keystone Token Validation Flow](/static/post_image/openstack_keystone_token_validation_flow.png)
+![OpenStack Keystone Token Validation Flow](/post_images/openstack_keystone_token_validation_flow.png)
 
 1) `클라이언트`는 `사용자(User)`의 신원 정보가 담긴 `Credential`정보와 함께 `Keystone`에게 `Token` 생성 요청을 한다.
 

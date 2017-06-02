@@ -17,7 +17,7 @@ Django는 웹 서버의 컨텐츠(데이터베이스)에 대한 관리 기능을
 
 `http://127.0.0.1:8000/admin`와 같이 앞서 브라우저에 띄운 주소 뒤에 `/admin`을 붙어 아래와 같이 관리자 사이트에 접속한다.
 
-![Django Admin Login](/static/post_image/django_admin.png)
+![Django Admin Login](/post_images/django_admin.png)
 
 ## 관리자(슈퍼 유저) 생성
 
@@ -39,7 +39,7 @@ Superuser created successfully.
 
 위에서 생성한 정보를 바탕으로 관리자 페이지를 로그인하면 아래와 같이 데이터를 관리할 수 있는 관리 화면으로 이동하게 된다.
 
-![Django Admin Dashboard](/static/post_image/django_admin_dashboard.png)
+![Django Admin Dashboard](/post_images/django_admin_dashboard.png)
 
 위의 스크린샷을 보면 이미 `Users`와 `Groups` 테이블이 생성되어 있는 것을 확인할 수 있는데 이는 이미 `settings.py` 파일에 `django.contrib.auth` 어플리케이션이 `INSTALLED_APPS` 항목에 등록되어 있기 때문이다.
 

@@ -71,13 +71,13 @@ $ ./run_tests.sh --runserver localhost:9000
 
 PyCharm > Preferences > Languages & Frameworks > Django에 들어가서 [Enable Django Support] 항목을 체크한다.
 
-![Pycharm Django Setting](/static/post_image/openstack_pycharm_django_setting.png)
+![Pycharm Django Setting](/post_images/openstack_pycharm_django_setting.png)
 
 ### Project Configuration
 
 PyCharm > Run > Edit Configurations... > Environment variables 설정을 아래와 같이 한다.
 
-![Pycharm Django Setting](/static/post_image/openstack_pycharm_project_configuration.png)
+![Pycharm Django Setting](/post_images/openstack_pycharm_project_configuration.png)
 
 ### Debugger Speedup
 
